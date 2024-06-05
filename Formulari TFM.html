@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulari d'Avaluació</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color:#e2edf2;
+        }
+        fieldset {
+            margin-bottom: 20px;
+            border: 2px solid #83bffb;
+            border-radius: 10px;
+            padding: 20px;
+            background-color:rgb(196, 216, 251);
+        }
+        legend {
+            font-weight: bold;
+            color: #336699;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .inline-label {
+            display: inline-block;
+
+        }
+        .radio-group {
+            margin-bottom: 5px;
+        }
+        .radio-group label {
+            display: inline-block;
+
+        }
+        .select {
+            padding: 8px;
+   
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+            background-color: #f0f0f0;
+        }
+      
+        .breu-resposta {
+            width: 90%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 2px solid #cccccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+       
+        button {
+            padding: 10px 20px;
+            background-color: #336699;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #255784;
+        }
+        table {
+            width: 60%;
+            border-collapse: collapse;
+            margin-bottom: 15px;
+        }
+
+        th, td {
+            border: 1px solid #434242;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        h1{
+            color:darkblue;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Avaluació diagnostica</H1>
+    <form action="#" method="POST">
+        <!-- dades personals -->
+        <fieldset>
+            <legend>DADES PERSONALS</legend>
+            <div>
+                <label for="nom" class="inline-label">Nom:</label>
+                <input type="text" id="nom" name="nom"  >
+                <label for="cognoms" class="inline-label">Cognoms:</label>
+                <input type="text" id="cognoms" name="cognoms"  size="60" >
+
+                <label for="curs" class="inline-label">Curs:</label>
+                <select id="curs" name="curs" class="inline-label">
+                    <option value=""></option>
+                    <option value="23-24">2023-24</option>
+                    <option value="24-25">2024-25</option>
+                </select>
+
+                <label for="cicle" class="inline-label">Cicle:</label>
+                <select id="cicle" name="cicle" class="inline-label">
+                    <option value=""></option>
+                    <option value="SMX">SMX</option>
+                    <option value="CAI">CAI</option>
+                    <option value="GUIAM">GUIAM</option>
+                </select>
+                <label for="grup" class="inline-label" >Grup:</label>
+                <select id="grup" name="grup" class="inline-label">
+                    <option value=""></option>
+                    <option value="1r">1r</option>
+                    <option value="2n">2n</option>
+                </select>
+   
+            <div class="radio-group">
+                <label>Tens experiència relacionada amb el cicle formatiu?</label>
+                <label for="experiencia_si">SI</label>
+                <input type="radio" id="experiencia_si" name="experiencia" value="SI">
+                <label for="experiencia_no">NO</label>
+                <input type="radio" id="experiencia_no" name="experiencia" value="NO">
+            </div>
+            <div class="radio-group">
+                <label>Treballes actualment?</label>
+                <label for="treball_si">SI</label>
+                <input type="radio" id="treball_si" name="treball" value="SI">
+                <label for="treball_no">NO</label>
+                <input type="radio" id="treball_no" name="treball" value="NO">
+            </div>
+
+        <!--  -->
+        <label for="access" class="inline-label" >Via d'àcces: </label>
+        <select id="access" name="access" class="select">
+            <option value=""></option>
+            <option value="ESO">ESO</option>
+            <option value="Prova">Prova d'àccess</option>
+            <option value="Batxi">Curs especific per l'àcces als cicles formatius de grau mitjà</option>
+            <option value="Batxi">PQPI</option>
+            <option value="Batxi">Tècnic o tècnic auxiliar </option>
+            <option value="Batxi">Batxillerat</option>
+        </select>
+
+        <label for="Docu" class="inline-label" >Documentació: </label>
+        <select id="Docu" name="Docu" class="select">
+            <option value=""></option>
+            <option value="notes">Notes 4t ESO</option>
+            <option value="histo">Historial Acadèmic</option>
+            <option value="consell">Consell Orientador</option>
+            <option value="competencies">Competències basiques 4t d'ESO</option>
+            <option value="informe">Informe NESE</option>
+        </select>
+        <label for="añtres" class="inline-label"> Altres: </label>
+        <input type="text" id="altres" name="altres"  >
+
+        </fieldset>
+
+        <fieldset>
+            <legend>PERSONALITAT </legend>
+            <p>AUTONOMIA: és la capacitat per realitzar una tasca de forma independent, és a dir, executant-la de principi a fi sense necessitat de rebre cap ajut o suport. Valora el teu grau d'autonomia a l'aula.</p>
+            <label for="autonomia" class="inline-label" >Per realitzar una tasca, he de demanar ajuda... </label>
+            <select id="autonomia" name="autonomia" class="select">
+                <option value="tria una opcio..."></option>
+                <option value="Molt sovint">Molt sovint</option>
+                <option value="Sovint">Sovint</option>
+                <option value="Alguna vegada">Alguna vegada</option>
+                <option value="Gairebé mai">Gairebé mai</option>
+            </select>
+
+           <p> RESPONSABILITAT EN EL TREBALL: és la disposició per implicar-se en la feina, considerant-la l'expressió de la competència personal i professional, i vetllant pel bon funcionament dels recursos humans o materials relacionats amb el treball.</p>
+           <p></p>
+           <label for="responsabilitat" class="inline-label" >Valora el teu grau de responsabilitat en el treball: </label>
+           <select id="responsabilitat" name="responsabilitat" class= "select">
+            <option value="tria una opcio..."></option>
+            <option value="Gens responsable">Gens responsable</option>
+            <option value="Poc responsable">Poc responsable</option>
+            <option value="Bastant responsable">Bastant responsable</option>
+            <option value="Molt responsable">Molt responsable</option>
+           </select>
+
+           <p>INICIATIVA: és la disposició i habilitat per prendre decisions sobre propostes o accions. Donat el cas que vagin en la línia de millorar el procés, producte o servei, per canvi o modificació, s'està definint la capacitat d'innovació.</p>
+           <label for="iniciativa" class="inline-label">Valora el teu grau d'iniciativa </label>
+           <select id="iniciativa" name="iniciativa" class= "select">
+            <option value="tria una opcio..."></option>
+            <option value="Gens">Gens</option>
+            <option value="Poc">Poc</option>
+            <option value="Bastant">Bastant</option>
+            <option value="Molt">Molt</option>
+           </select>
+
+           <p>TREBALL EN EQUIP: és la disposició i habilitat per col·laborar de manera coordinada en la tasca realitzada conjuntament per un equip de persones per tal d'assolir un objectiu proposat.</p>
+           <label for="treball" class="inline-label">Has de valorar el teu grau de disposició a treballar en grup </label>
+           <select id="treball" name="treball" class= "select">
+            <option value="tria una opcio..."></option>
+            <option value="Gens">Gens</option>
+            <option value="Poc">Poc</option>
+            <option value="Bastant">Bastant</option>
+            <option value="Molt">Molt</option>
+           </select>
+
+           <p>RELACIÓ INTERPERSONAL: és la disposició i habilitat per comunicar-se amb els altres amb un tracte adient, amb atenció i empatia.</p>
+           <label for="relacio" class="inline-label">Has de valorar el teu grau de relació interpersonal </label>
+           <select id="relacio" name="relacio" class= "select">
+            <option value="tria una opcio..."></option>
+            <option value="Gens">Gens</option>
+            <option value="Poc">Poc</option>
+            <option value="Bastant">Bastant</option>
+            <option value="Molt">Molt</option>
+           </select>
+
+           <p>CREATIVITAT: és la generació o posada en relació d'idees originals i potencialment útils.</p>
+           <label for="creativitat" class="inline-label">Has de valorar el teu grau de creativitat </label>
+           <select id="creativitat" name="creativitat" class= "select">
+            <option value="tria una opcio..."></option>
+            <option value="Gens">Gens</option>
+            <option value="Poc">Poc</option>
+            <option value="Bastant">Bastant</option>
+            <option value="Molt">Molt</option>
+           </select>
+
+           <p>AUTOESTIMA: és el sentiment subjectiu del propi jo que acompanya la valoració global que una persona fa d'ella mateixa.</p>
+           <label for="autoestima" class="inline-label">Has de valorar la freqüència amb la que reconeixes les teves emocions </label>
+           <select id="autoestima" name="autoestima" class= "select">
+            <option value="tria una opcio..."></option>
+            <option value="Gens">Gens</option>
+            <option value="Poc">Poc</option>
+            <option value="Bastant">Bastant</option>
+            <option value="Molt">Molt</option>
+           </select>
+           <br> <br>
+
+            <label for="expectatives" class="inline-label">DADES D'EXPECTATIVES: En acabar aquest cicle, què penses fer? </label>
+            <select id="expectatives" name="expectatives" class="select">
+                <option value=""></option>
+                <option value="Cercaré feina relacionada amb els estudis">Cercaré feina relacionada amb els estudis</option>
+                <option value="Continuaré estudiant un cicle formatiu de grau mitjà">Continuaré estudiant un cicle formatiu de grau mitjà</option>
+                <option value="Continuaré estudiant un cicle formatiu de grau superior">Continuaré estudiant un cicle formatiu de grau superior</option>
+                <option value="Cercaré feina i continuaré estudiant">Cercaré feina i continuaré estudiant</option>
+                <option value="No ho sé">No ho sé</option>
+            </select>
+
+           <p>HÀBITS DE TREBALL: són unes pautes i rutines que ajuden als alumnes  a estructurar-se i a orientar-se. L'adquisició dels diferents hàbits els permet ser més autònoms i autònomes, fa possible que tinguin una convivència positiva amb els altres i són necessaris en l'adquisició dels nous aprenentatges.</p>
+           <p></p>
+           <label for="habits" class="inline-label">Has de valorar la freqüència amb la que reconeixes les teves emocions </label>
+           <select id="habits" name="habits" class= "select">
+            <option value="tria una opcio..."></option>
+            <option value="Gens">Gens</option>
+            <option value="Poc">Poc</option>
+            <option value="Bastant">Bastant</option>
+            <option value="Molt">Molt</option>
+           </select>
+           <br><br>
+
+            <label for="curriculum" class="inline-label">Saps fer el teu currículum? </label>
+            <select id="curriculum" name="curriculum" class="select">
+                <option value=""></option>
+                <option value="El sé fer però no l'he utilitzat mai">El sé fer però no l'he utilitzat mai</option>
+                <option value="L'he fet i utilitzat per a buscar feina">L'he fet i utilitzat per a buscar feina</option>
+                <option value="No l'he fet">No l'he fet</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>SMX</legend>
+            <legend> Per què t'interessa estudiar Sistemes Microinformàtic i Xarxes?</legend>
+            <input type="text" id="estudiar" name="estudiar" class="breu-resposta">
+
+            <div >
+                <label for="programari">Saps treballar amb els següents tipus de programari?</label>
+                <table>
+                    <tr>
+                        <th>Programari</th>
+                        <th>Gens, no l'he fet servir mai</th>
+                        <th>Una mica, conec el funcionament bàsic</th>
+                        <th>Molt, l'he utilitzat bastant</th>
+                    </tr>
+                    <tr>
+                        <td>Processadors de text (Microsoft Word, Google Documents, LibreOffice Writer)</td>
+                        <td><input type="radio" id="programari_text_gens" name="programari_text" value="Gens"></td>
+                        <td><input type="radio" id="programari_text_poc" name="programari_text" value="Una mica"></td>
+                        <td><input type="radio" id="programari_text_molt" name="programari_text" value="Molt"></td>
+                    </tr>
+                    <tr>
+                        <td>Fulls de càlcul (Microsoft Excel, Fulls de càlcul Google, LibreOffice Calc)</td>
+                        <td><input type="radio" id="programari_calc_gens" name="programari_calc" value="Gens"></td>
+                        <td><input type="radio" id="programari_calc_poc" name="programari_calc" value="Una mica"></td>
+                        <td><input type="radio" id="programari_calc_molt" name="programari_calc" value="Molt"></td>
+                    </tr>
+                    <tr>
+                        <td>Gestors de bases de dades (Microsoft Access, LibreOffice Base)</td>
+                        <td><input type="radio" id="programari_bd_gens" name="programari_bd" value="Gens"></td>
+                        <td><input type="radio" id="programari_bd_poc" name="programari_bd" value="Una mica"></td>
+                        <td><input type="radio" id="programari_bd_molt" name="programari_bd" value="Molt"></td>
+                    </tr>
+                    <tr>
+                        <td>Editors d'imatge (Gimp, Photoshop, Krita...)</td>
+                        <td><input type="radio" id="programari_imatge_gens" name="programari_imatge" value="Gens"></td>
+                        <td><input type="radio" id="programari_imatge_poc" name="programari_imatge" value="Una mica"></td>
+                        <td><input type="radio" id="programari_imatge_molt" name="programari_imatge" value="Molt"></td>
+                    </tr>
+                    <tr>
+                        <td>Editors de vídeo (OpenShot, Kdenlive, Sony Vegas,...)</td>
+                        <td><input type="radio" id="programari_video_gens" name="programari_video" value="Gens"></td>
+                        <td><input type="radio" id="programari_video_poc" name="programari_video" value="Una mica"></td>
+                        <td><input type="radio" id="programari_video_molt" name="programari_video" value="Molt"></td>
+                    </tr>
+                </table>
+            </div>
+       
+            <legend>Has muntat alguna vegada un PC a partir de components?</legend>
+            <input type="text" id="muntat_pc" name="muntat_pc" class="breu-resposta">
+       
+            <legend>Coneixes el sistema operatiu Linux?</legend>
+            <select id="linux" name="linux" class="select">
+                <option value=""></option>
+                <option value="Sí, n'he sentit a parlar però no l'he utilitzat mai">Sí, n'he sentit a parlar però no l'he utilitzat mai</option>
+                <option value="Sí, i l'he utilitzat alguna vegada">Sí, i l'he utilitzat alguna vegada</option>
+                <option value="Sí, sóc usuari habitual">Sí, sóc usuari habitual</option>
+                <option value="No">No</option>
+            </select>
+            <br><br>
+
+            <legend>Alguna vegada has configurat una IP a un ordinador?</legend>
+            <select id="configurar_ip" name="configurar_ip" class="select">
+                <option value=""></option>
+                <option value="SI">Sí</option>
+                <option value="NO">No</option>
+            </select>
+            <br><br>
+            
+            <legend>Has programat alguna vegada?</legend>
+            <select id="programat" name="programat" class="select">
+                <option value=""></option>
+                <option value="SI">Sí</option>
+                <option value="NO">No</option>
+            </select>            
+ 
+            <div>
+                <label for="llenguatges_programacio">En cas d'haver contestat Sí a la pregunta anterior: En quin llenguatge has programat i quin nivell tens?</label>
+            <table>
+                <tr>
+                    <th>Llenguatge</th>
+                    <th>Baix</th>
+                    <th>Mig</th>
+                    <th>Alt</th>
+                </tr>
+                <tr>
+                    <td>Python</td>
+                    <td><input type="radio" id="python_baix" name="python" value="Baix"></td>
+                    <td><input type="radio" id="python_mig" name="python" value="Mig"></td>
+                    <td><input type="radio" id="python_alt" name="python" value="Alt"></td>
+                </tr>
+                <tr>
+                    <td>Java</td>
+                    <td><input type="radio" id="java_baix" name="java" value="Baix"></td>
+                    <td><input type="radio" id="java_mig" name="java" value="Mig"></td>
+                    <td><input type="radio" id="java_alt" name="java" value="Alt"></td>
+                </tr>
+                <tr>
+                    <td>Javascript</td>
+                    <td><input type="radio" id="javascript_baix" name="javascript" value="Baix"></td>
+                    <td><input type="radio" id="javascript_mig" name="javascript" value="Mig"></td>
+                    <td><input type="radio" id="javascript_alt" name="javascript" value="Alt"></td>
+                </tr>
+                <tr>
+                    <td>PHP</td>
+                    <td><input type="radio" id="php_baix" name="php" value="Baix"></td>
+                    <td><input type="radio" id="php_mig" name="php" value="Mig"></td>
+                    <td><input type="radio" id="php_alt" name="php" value="Alt"></td>
+                </tr>
+                <tr>
+                    <td>AppInventor – Scratch</td>
+                    <td><input type="radio" id="appinventor_baix" name="appinventor" value="Baix"></td>
+                    <td><input type="radio" id="appinventor_mig" name="appinventor" value="Mig"></td>
+                    <td><input type="radio" id="appinventor_alt" name="appinventor" value="Alt"></td>
+                </tr>
+                <tr>
+                    <td>Altres</td>
+                    <td><input type="radio" id="altres_baix" name="altres" value="Baix"></td>
+                    <td><input type="radio" id="altres_mig" name="altres" value="Mig"></td>
+                    <td><input type="radio" id="altres_alt" name="altres" value="Alt"></td>
+                </tr>
+            </table>
+            <br>
+            </div>
+
+            <legend>Has fet alguna vegada una pàgina web?</legend>
+            <select id="web" name="web" class="select">
+                <option value=""></option>
+                <option value="Google sites">Sí, amb Google Sites</option>
+                <option value="Wordpress">Sí, amb un gestor de continguts tipus Wordpress</option>
+                <option value="Html">Sí, amb HTML i CSS</option>
+                <option value="NO">NO</option>
+            </select>  
+        </fieldset>
+
+        <button type="submit">Enviar</button> 
+        <button type="button" onclick="window.location.href='Index.html'">Pàgina Inici</button>
+    </form>
+</body>
+</html>
